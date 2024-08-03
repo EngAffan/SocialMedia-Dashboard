@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo"> M 
+    <span>Affan</span></a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+        <nav class="navabar">
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Search">
+                <button class="search-button">Search</button>
+            </div>
+            
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <!------side bar------>
+        <div class="sidebar">
+            <div class="menu">
+                <div class="menu-detail menu-active">
+                    <a href="#">
+                        <i class="fa-solid fa-chart-pie menu-icon"></i> <span>Dashboard</span>
+                    </a>
+                </div>
+                <div class="menu-detail">
+                    <a href="#">
+                        <i class="fa-solid fa-gift menu-icon"></i> <span>Campaign</span>
+                    </a>
+                </div>
+                <div class="menu-detail">
+                    <a href="#">
+                        <i class="fa-solid fa-headset menu-icon"></i> <span>Support Center</span>
+                    </a>
+                </div>
+                <div class="menu-detail">
+                    <a href="#">
+                        <i class="fa-solid fa-lock menu-icon"></i> <span>Security</span>
+                    </a>
+                </div>
+                <div class="menu-detail">
+                    <a href="#">
+                        <i class="fa-solid fa-gear menu-icon"></i> <span>Settings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard">
+        <div class="card">
+            <h2>
+                <i class="fa-brands fa-instagram instagram-icon"></i>
+                Instagram Followers</h2>
+            <p id="followers-count"></p>
+        </div>
+        <div class="card">
+            <h2>
+                <i class="fa-solid fa-bolt"></i>
+                Latest Post Performance</h2>
+            <p>Impressions: <span id="impressions"></span></p>
+            <p>Likes: <span id="likes"></span></p>
+            <p>Comments: <span id="comments"></span></p>
+            <p>Engagement Rate: <span id="engagement-rate"></span></p>
+        </div>
+        <div class="card">
+            <h2>Website Traffic from Instagram</h2>
+            <canvas id="traffic-chart"></canvas>
+        </div>
+        <div class="card">
+            <h2>Revenue by Promo Code</h2>
+            <canvas id="revenue-chart"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

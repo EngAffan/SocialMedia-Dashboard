@@ -1,0 +1,266 @@
+
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #001005;
+    --text-color: white;
+    --main-color: #3700ff;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(27, 25, 25);
+    margin: 0;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "header header header"
+    "sidebar dashboard dasboard";
+}
+
+.header {
+    position: fixed;
+    width: 90%;
+    top: 0;
+    left: 0;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.header a{
+    text-decoration: none;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+span {
+    color: var(--main-color);
+}
+
+nav{
+    font-size: large;
+    margin-bottom: -1%;
+}
+
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 800;
+    border-bottom: 3px solid transparent ;
+    transition: 0.3s ease;
+    
+}
+
+a{
+    margin: 0 10px;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid var(--main-color);
+    color: var(--main-color);
+}
+
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+.search-box {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+}
+.search-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+
+.container{
+    width: 100%;
+    height: max-content;
+    padding: 2rem;
+    margin-top: 40px;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 10rem;
+    left: 1rem;
+    z-index: 1;
+    width: 60px;
+    height: auto;
+    margin-top: 10px;
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+}
+
+.menu-btn {
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--secondarycolor);
+}
+
+
+.menu-detail{
+    margin: 0.3rem 0;
+    padding: 0.5rem 1rem;
+}
+
+.menu-detail:hover{
+    background-color: var(--primarycolor);
+    border-radius: 20px;
+    box-shadow: rgba(45, 17, 199, 0.699) 0px 2px 8px 0px;
+}
+
+.menu-detail a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+.menu-detail a span{
+    display: none;
+}
+
+.menu-icon{
+    font-size: 24px;
+    margin-right: 18px;
+    color: var(--fontcolor);
+    text-shadow: rgba(99, 99, 99, 0.2) 8px 2px 8px 0px;
+}
+
+.menu-active{
+    background-color: var(--primarycolor);
+    border-radius: 20px;
+}
+
+
+.dashboard {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    gap: 20px;
+    margin-top: 80px;
+}
+
+.card {
+    background: rgb(56, 55, 55);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+.card p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+#followers-count {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.instagram-icon {
+    color: #E4405F;
+}
+
+
+@media (max-width:880px){
+    .dashboard{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: flex-start;
+        margin-right: 3rem;
+    }
+    .card{
+        width: 90%;
+    }
+    .search-box{
+        width: 80%;
+    }
+}
+
+@media(max-width:672px){
+    .dashboard{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width:572px){
+    .search-box{
+        width: 60%;
+    }
+    .header a{
+        font-size: 30PX;
+    }
+}
+
+@media (max-width:490px){
+    .search-box{
+        width: 45%;
+    }
+    .header a{
+        font-size: 25px;
+    }
+    .card{
+        width: 90%;
+    }
+
+    .dashboard{
+        margin-right: 20px;
+    }
+}
+

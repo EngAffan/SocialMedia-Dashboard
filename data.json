@@ -1,0 +1,17 @@
+{
+  "followers": 135750,
+  "latestPostPerformance": {
+      "impressions": 45000,
+      "likes": 2300,
+      "comments": 180,
+      "engagementRate": 5.2
+  },
+  "websiteTraffic": {
+      "labels": ["1 Mar", "7 Mar", "14 Mar", "21 Mar"],
+      "data": [5000, 9500, 7000, 12000]
+  },
+  "revenueByPromoCode": {
+      "labels": ["PROMO1", "PROMO2", "PROMO3", "PROMO4", "PROMO5"],
+      "data": [9000, 7000, 3000, 4000, 5000]
+  }
+}
